@@ -8,5 +8,5 @@ lua-build:
 lua-install: lua-build
 	@luarocks install ${PLUGIN_NAME}-${PLUGIN_VERSION}.all.rock
 
-upload:
-	luarocks upload kong-plugin-cads-jwt-keycloak-${PLUGIN_VERSION}.rockspec --api-key=${API_KEY}
+lua-upload: lua-build
+	luarocks upload ${PLUGIN_NAME}-${PLUGIN_VERSION}.rockspec --api-key=${API_KEY}
