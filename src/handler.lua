@@ -1,9 +1,7 @@
-local BasePlugin = require "kong.plugins.base_plugin"
-
-local StashBodyInCtxHandler = BasePlugin:extend()
-
-StashBodyInCtxHandler.PRIORITY = 12
-StashBodyInCtxHandler.VERSION = "1.0.0"
+local JwtKeycloakHandler = {
+  VERSION  = "1.1.0",
+  PRIORITY = 12,
+}
 
 function StashBodyInCtxHandler:new()
     StashBodyInCtxHandler.super.new(self, "stash-body-in-ctx")
