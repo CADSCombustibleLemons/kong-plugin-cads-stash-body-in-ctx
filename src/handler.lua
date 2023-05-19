@@ -3,12 +3,7 @@ local JwtKeycloakHandler = {
   PRIORITY = 12,
 }
 
-function StashBodyInCtxHandler:new()
-    StashBodyInCtxHandler.super.new(self, "stash-body-in-ctx")
-end
-
 function StashBodyInCtxHandler:access(conf)
-    StashBodyInCtxHandler.super.access(self)
     if conf.stash_request_body
     then
         kong.ctx.shared.request_body = kong.request.get_raw_body();
@@ -16,7 +11,6 @@ function StashBodyInCtxHandler:access(conf)
 end
 
 function StashBodyInCtxHandler:body_filter(conf)
-    StashBodyInCtxHandler.super.body_filter(self)
     if conf.stash_request_body
     then
         local ctx = kong.ctx.shared;
