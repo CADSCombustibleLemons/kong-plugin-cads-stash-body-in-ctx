@@ -11,7 +11,7 @@ function StashBodyInCtxHandler:access(conf)
 end
 
 function StashBodyInCtxHandler:body_filter(conf)
-    if conf.stash_request_body
+    if conf.stash_response_body
     then
         local ctx = kong.ctx.shared;
         local chunk, eof = ngx.arg[1], ngx.arg[2];
