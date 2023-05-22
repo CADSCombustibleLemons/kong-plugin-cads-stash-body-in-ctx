@@ -1,4 +1,4 @@
-local JwtKeycloakHandler = {
+local StashBodyInCtxHandler = {
   VERSION  = "1.1.0",
   PRIORITY = 12,
 }
