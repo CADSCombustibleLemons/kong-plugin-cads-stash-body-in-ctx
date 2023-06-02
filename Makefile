@@ -1,4 +1,4 @@
-PLUGIN_VERSION?=1.0.0-1
+PLUGIN_VERSION?=1.1.0-1
 PLUGIN_NAME?=kong-plugin-cads-stash-body-in-ctx
 
 lua-build:
